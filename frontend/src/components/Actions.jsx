@@ -156,29 +156,35 @@ const Actions = ({ post }) => {
 					{post.likes.length} likes
 				</Text>
 			</Flex>
-
 			<Modal isOpen={isOpen} onClose={onClose}>
-				<ModalOverlay />
-				<ModalContent>
-					<ModalHeader></ModalHeader>
-					<ModalCloseButton />
-					<ModalBody pb={6}>
-						<FormControl>
-							<Input
-								placeholder='Reply goes here..'
-								value={reply}
-								onChange={(e) => setReply(e.target.value)}
-							/>
-						</FormControl>
-					</ModalBody>
+	<ModalOverlay />
+	<ModalContent maxH="150px" position="absolute" bottom="20" w="full" height={120}>
+		<ModalBody pb={2} px={4}>
+			<FormControl>
+				<Input
+					placeholder='Reply goes here..'
+					value={reply}
+					onChange={(e) => setReply(e.target.value)}
+					size="sm"
+					style={{marginTop:20}}
+				/>
+			</FormControl>
+		</ModalBody>
+		<ModalFooter py={2} px={4}>
+			<Button
+				colorScheme="blue"
+				size="sm"
+				isLoading={isReplying}
+				onClick={handleReply}
+			>
+				Reply
+			</Button>
+		</ModalFooter>
+	</ModalContent>
+</Modal>
 
-					<ModalFooter>
-						<Button colorScheme='blue' size={"sm"} mr={3} isLoading={isReplying} onClick={handleReply}>
-							Reply
-						</Button>
-					</ModalFooter>
-				</ModalContent>
-			</Modal>
+
+
 		</Flex>
 	);
 };

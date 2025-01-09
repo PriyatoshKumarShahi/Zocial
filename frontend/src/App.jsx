@@ -22,6 +22,7 @@ function App() {
 					<Route path='/' element={user ? <HomePage /> : <Navigate to='/auth' />} />
 					<Route path='/auth' element={!user ? <AuthPage /> : <Navigate to='/' />} />
 					<Route path='/update' element={user ? <UpdateProfilePage /> : <Navigate to='/auth' />} />
+					<Route path='/create' element={user ? <CreatePost /> : <Navigate to='/auth' />} />
 
 					<Route
 						path='/:username'
@@ -32,7 +33,7 @@ function App() {
 									<CreatePost />
 								</>
 							) : (
-								<UserPage />
+								<AuthPage />
 							)
 						}
 					/>

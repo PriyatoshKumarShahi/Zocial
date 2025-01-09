@@ -86,14 +86,17 @@ const UserHeader = ({ user }) => {
 				<Flex>
 					<Box className='icon-container'>
 
-									<Image
-										cursor={"pointer"}
-										alt='logo'
-										height={50}
-										width={50}
-                    borderRadius = {20}
-										src="/zocial logo-modified.png"
-									/>
+					<img 
+    src="/zocial logo-modified.png" 
+    alt="logo" 
+    style={{
+      cursor: "pointer", 
+      height: "25px", 
+      width: "85px",	
+      borderRadius: "20px"
+    }}
+  />
+
 					
 					</Box>
 					<Box className='icon-container'>

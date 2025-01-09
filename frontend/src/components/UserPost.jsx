@@ -1,5 +1,5 @@
-import { Avatar } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
+import { Avatar  ,Image} from "@chakra-ui/react";
+
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -50,7 +50,7 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 							<Text fontSize={"sm"} fontWeight={"bold"}>
 								markzuckerberg
 							</Text>
-							<Image src='/verified.png' w={4} h={4} ml={1} />
+							<Image src='/verified.png' w={4} h={4} ml={1} alt="Verified-user"/>
 						</Flex>
 						<Flex gap={4} alignItems={"center"}>
 							<Text fontStyle={"sm"} color={"gray.light"}>
@@ -63,7 +63,7 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 					<Text fontSize={"sm"}>{postTitle}</Text>
 					{postImg && (
 						<Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
-							<Image src={postImg} w={"full"} />
+							<Image src={postImg} w={"full"}alt={postTitle} />
 						</Box>
 					)}
 
