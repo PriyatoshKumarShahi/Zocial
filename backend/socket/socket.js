@@ -17,7 +17,7 @@ export const getRecipientSocketId = (recipientId) => {
 	return userSocketMap[recipientId];
 };
 
-const userSocketMap = {}; // userId: socketId
+const userSocketMap = {}; 
 
 io.on("connection", (socket) => {
 	console.log("user connected", socket.id);
@@ -35,7 +35,6 @@ io.on("connection", (socket) => {
 			console.log(error);
 		}
 	});
-
 	socket.on("disconnect", () => {
 		console.log("user disconnected");
 		delete userSocketMap[userId];

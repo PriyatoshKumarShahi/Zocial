@@ -95,7 +95,7 @@ const ChatPage = () => {
 			const mockConversation = {
 				mock: true,
 				lastMessage: {
-					text: "",
+					text: [],
 					sender: "",
 				},
 				_id: Date.now(),
@@ -183,7 +183,7 @@ const ChatPage = () => {
 					width={150} 
 					alt="" 
 					style={{
-						animation: "bounce 1s easy-in infinite"
+						animation: "bounce 2s infinite"
 					}} 
 				/>
 				<Text fontSize={20}>Select a conversation to start messaging</Text>
