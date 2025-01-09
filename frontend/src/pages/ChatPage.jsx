@@ -168,18 +168,40 @@ const ChatPage = () => {
 						))}
 				</Flex>
 				{!selectedConversation._id && (
-					<Flex
-						flex={70}
-						borderRadius={"md"}
-						p={2}
-						flexDir={"column"}
-						alignItems={"center"}
-						justifyContent={"center"}
-						height={"400px"}
-					>
-						<GiConversation size={100} />
-						<Text fontSize={20}>Select a conversation to start messaging</Text>
-					</Flex>
+				<Flex
+				flex={70}
+				borderRadius={"md"}
+				p={2}
+				flexDir={"column"}
+				alignItems={"center"}
+				justifyContent={"center"}
+				height={"400px"}
+			>
+				<img 
+					src="/zocial logo-modified.png" 
+					height={150} 
+					width={150} 
+					alt="" 
+					style={{
+						animation: "bounce 1s easy-in infinite"
+					}} 
+				/>
+				<Text fontSize={20}>Select a conversation to start messaging</Text>
+			
+				<style>
+					{`
+						@keyframes bounce {
+							0%, 100% {
+								transform: translateY(0);
+							}
+							50% {
+								transform: translateY(-15px);
+							}
+						}
+					`}
+				</style>
+			</Flex>
+			
 				)}
 
 				{selectedConversation._id && <MessageContainer />}
